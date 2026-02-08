@@ -11,6 +11,21 @@
   "dependencies": {
     "next": "14.1.0",
     "react": "^18.2.0",
+    <div class="container">
+        <!-- Dashboard Page -->
+        <div id="dashboard" class="page active">
+            <div id="followup-alert"></div>
+            
+            <h1 style="margin-bottom: 24px;">Dashboard</h1>
+            
+            <div class="kpi-grid">
+                <div class="kpi-card blue">
+                    <div class="kpi-label">SMS Sent</div>
+                    <div class="kpi-value" id="kpi-sent">0</div>
+                    <div class="kpi-sub">Total outreach</div>
+                </div>
+                <div class="kpi-card green">
+                    <div class="kpi-label">Replies</div>
     "react-dom": "^18.2.0",
     "@vercel/kv": "^1.0.1",
     "recharts": "^2.10.4",
@@ -28,14 +43,3 @@
     "autoprefixer": "^10.4.17"
   }
 }
----
-
-⚙️ next.config.js
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    serverComponentsExternalPackages: ['@vercel/kv'],
-  },
-}
-
-module.exports = nextConfig
